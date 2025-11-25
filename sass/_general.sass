@@ -49,15 +49,44 @@ body
             display: flex
         &-item
             margin-right: 31px
-            font-weight: 500
+            font-weight: 600
             font-size: clamp(20px, 1vw, 25px)
             color: #000
             transition: all .2s
             &:last-child
                 margin-right: 0px
-            &:hover
-                // transform: scale(1.1)
-                transition: all .2s
+    li
+        position: relative
+    li::after 
+        content:''
+        position: absolute
+        width: 0%
+        height: 2px
+        bottom: -4px
+        left: 0
+        background: #000000
+        transition: all 0.3s ease-in-out
+    li:hover::after
+        width: 100%
+    .nav-bar__navigation-item--has-submenu
+        position: relative
+    .nav-bar__navigation-item--has-submenu::after
+        background-image: url('../assets/img/sub-menu-icon.svg')
+        background-position: center
+        background-repeat: no-repeat
+        background-color: #ffffff00
+        background-size: contain
+        width: 10px
+        height: 10px
+        top: 25%
+        left: 110%
+        transform: rotate(-90deg)
+    .nav-bar__navigation-item--has-submenu:hover::after
+        width: 20px
+        transform: rotate(0deg)
+
+        
+                
            
                 
                 
@@ -66,23 +95,36 @@ body
         position: absolute
         background: #024DB4
         color: #fff
-        
-        height: 0px
-        top:10%
+        transform: scaleY(0)
+        transform-origin: top
+        top:150%
         overflow: hidden
         transition: all 1s
-        &:hover
-            // transform: scale(1)
-            transition: all 1s
+        padding: 15px
+        padding-top: 20px
+        min-width: 245px
         li
             margin-bottom: 15px
             font-size: 18px
+            position: relative
+            width: fit-content
+        li::after 
+            content:''
+            position: absolute
+            width: 0%
+            height: 2px
+            bottom: -4px
+            left: 0
+            background: #fff
+            transition: all 0.3s ease-in-out
+            // transform: translate(-50%)
+        li:hover::after
+            width: 100%
+
 
         &--visible
+            transform: scaleY(1)
             transition: all 1s
-            height: fit-content
-            padding: 15px
-            padding-top: 20px
             
 
 .hero
