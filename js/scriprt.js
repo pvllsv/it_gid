@@ -3,6 +3,17 @@ $(".js-tabs-link").aniTabs({
   slideDirection:"right" // or right
 });
 
+$(".nav-bar__navigation-item--has-submenu").hover(
+  function(){
+    $('.nav-bar__submenu').addClass('nav-bar__submenu--visible')
+    
+  },
+  function(){
+    $('.nav-bar__submenu').removeClass('nav-bar__submenu--visible')
+
+  }
+  )
+
 $('.taxanomy__items').slick({
   infinite: true,
   slidesToShow: 3,

@@ -3,9 +3,9 @@ h1, h2, h3, h4, h5, h6, li, a
 p
     font-family: Inter
     font-weight: 400  // выбираешь нужный вес
-    font-optical-sizing: auto
+    font-optical-sizing: auto 
 body 
-    background: #FAFAFA
+    background: #FAFAFA 
 .flex-box
     display: flex
     width: 100%
@@ -30,9 +30,11 @@ body
     overflow: hidden
 
 .container
-    max-width: 1400px 
+    max-width: 1360px 
     height: 100%
     margin: 0 auto
+    padding-right: 20px
+    padding-left: 20px
 
 .nav-bar
     &__inner
@@ -54,12 +56,34 @@ body
             &:last-child
                 margin-right: 0px
             &:hover
-                font-weight: 600
+                // transform: scale(1.1)
                 transition: all .2s
+           
                 
                 
     &__submenu
-        display: none
+        display: block
+        position: absolute
+        background: #024DB4
+        color: #fff
+        
+        height: 0px
+        top:10%
+        overflow: hidden
+        transition: all 1s
+        &:hover
+            // transform: scale(1)
+            transition: all 1s
+        li
+            margin-bottom: 15px
+            font-size: 18px
+
+        &--visible
+            transition: all 1s
+            height: fit-content
+            padding: 15px
+            padding-top: 20px
+            
 
 .hero
     &__inner
@@ -144,7 +168,7 @@ body
     display: flex
     justify-content: space-around
     height: 300px
-    border-bottom: none;
+    border-bottom: none 
     &__title
         font-weight: 500
         font-size: clamp(15px, 1.5vw, 25px)
@@ -226,7 +250,7 @@ body
         margin-top: 270px
         padding-bottom: 110px
     &__cards
-        display: grid;
+        display: grid
         grid-template-columns: repeat(4, 1fr)
         grid-template-rows: repeat(2, 1fr)
         grid-column-gap: 31px
@@ -397,6 +421,10 @@ body
         border: 1px solid #0960C3
         border-radius: 20px 
         height: 200px
+        transition: all 1s
+        &:hover
+            transform: translateY(-5px)
+            box-shadow: 0px 9px 22px 0px rgba(34, 60, 80, 0.2)
         &-linck 
             height: 100%
             display: flex
@@ -411,7 +439,7 @@ body
                 min-width: 40px
         &-title 
             font-weight: 600
-            font-size: 26px
+            font-size: clamp(18px, 2vw,26px)
             color: #000
             max-width: 256px
     &__btn
@@ -453,7 +481,7 @@ body
         display: block
     &__article
         font-weight: 500
-        font-size: 25px
+        font-size: clamp(14px, 1.1wh, 25px)
         color: rgba(255, 255, 255, 0.8)
         margin-bottom: 23px
         max-width: 260px    
