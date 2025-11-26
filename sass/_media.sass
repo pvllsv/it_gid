@@ -1,0 +1,48 @@
+@media (max-width: 650px)
+    .burger
+        display: flex !important
+    .nav-bar__inner--open
+        right: 0% !important
+
+
+    .nav-bar__inner
+        transition: all 1s
+        padding-top: 70px !important
+        flex-direction: column
+        justify-content: flex-start !important
+        align-items: center
+        position: fixed 
+        right: -100%
+        width: 50%
+        min-width: 260px
+        height: 100%
+        z-index: 3
+        .nav-bar__logo
+            margin: 0
+            margin-bottom: 30px
+
+
+    .nav-bar__navigation-items
+        flex-direction: column
+        li 
+            width: fit-content
+        .nav-bar__navigation-item
+            margin: 0
+            margin-bottom: 15px
+    body .nav-bar__navigation-items .nav-bar__submenu
+        position: inherit !important
+        height: 0 
+        padding: 0
+        width: 0
+    body .nav-bar__navigation-items .nav-bar__submenu--visible
+        margin-top: 10px
+        margin-bottom: 10px
+        height: fit-content
+        padding: 15px
+        padding-top: 20px
+        width: 100%
+    body .nav-bar__navigation-items .nav-bar__navigation-item--has-submenu::after
+        width: 7px
+        height: 7px
+        top: 8px
+        left: 22%
