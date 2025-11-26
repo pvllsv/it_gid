@@ -57,7 +57,7 @@ $('.taxanomy__items').slick({
   slidesToScroll: 1,
   centerMode: true,
   centerPadding: '0',
-  // autoplay:true,
+  autoplay:true,
   prevArrow:'<button type = "button" class = "slick-prev">  </ button>',
   nextArrow:'<button type = "button" class = "slick-next">  </ button>',
   responsive: [
@@ -72,6 +72,7 @@ $('.taxanomy__items').slick({
 	      breakpoint: 600,
 	      settings: {
 	        slidesToShow: 1,
+          arrows: false
 	      }
 	    }
     ]

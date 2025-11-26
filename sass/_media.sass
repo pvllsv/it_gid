@@ -1,3 +1,12 @@
+@media (max-width: 900px)
+    body .categories__list
+        grid-template-columns: repeat(2, minmax(0,1fr))
+    .categories__item-img
+        width: 80px !important
+        img
+            min-width: 80px !important
+        
+
 @media (max-width: 650px)
     .burger
         display: flex !important
@@ -71,3 +80,38 @@
     body .tabs .tab__img
         margin-left: 0
         margin-bottom: -8rem
+    .about__cards
+        flex-direction: column
+    body .about__card
+        width: 100%
+        min-height: 150px
+        margin-bottom: 20px
+    body .blog__inner
+        margin-top: 110px
+    body .categories__list
+        grid-template-columns: repeat(1, minmax(0,1fr))
+        .categories__item-linck
+            justify-content: center
+    .footer__list
+        flex-direction: column
+
+@media (max-width: 500px)
+    .tabs
+        flex-direction: column-reverse
+        height: 700px !important
+    .tabs-nav
+        margin-left: 0 !important
+    .tabs-nav__list
+        height: 200px !important
+        text-align: center
+    .taxanomy__item
+        height: 40vw !important
+
+@media (max-width: 400px)
+    .flex-box
+        flex-direction: column-reverse
+    .taxanomy__item-image
+        margin: 0 !important
+    .taxanomy__item-title
+        margin-bottom: 10px
+    
