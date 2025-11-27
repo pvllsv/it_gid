@@ -36,6 +36,9 @@ $(document).scroll(
         'border': '1px solid rgb(8 30 110 / 13%)'
         
       })
+      $('.top__scroll-vidget').css({
+        'display':'flex'
+      })
       
     }else{
       $('.burger').css({
@@ -44,12 +47,21 @@ $(document).scroll(
         'background': "#FAFAFA"
         
       })
+      $('.top__scroll-vidget').css({
+        'display':'none'
+      })
 
     }
    
   }
 
 )
+$('.top__scroll-vidget').click(
+  function(){
+    $('html, body').animate({scrollTop: 0}, 500)
+  }
+)
+
 
 $('.taxanomy__items').slick({
   infinite: true,

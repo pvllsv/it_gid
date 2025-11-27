@@ -12,6 +12,27 @@ body
     height: 100%
     align-items: center
     justify-content: center
+
+.top__scroll-vidget
+    position: fixed
+    display: none
+    justify-content: center
+    align-items: center
+    width: 50px
+    height: 50px
+    background: #fff
+    bottom: 10px
+    z-index: 100
+    right: 10px
+    border-radius: 100px
+    transition: all 1s
+    cursor: pointer
+    border: 1px solid #0816814d
+    &:hover
+        transform: scale(1.1)
+    img
+        width: 50%
+        transform: rotate(90deg)
 .toggle
     display: none
     position: fixed
